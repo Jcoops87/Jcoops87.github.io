@@ -2,7 +2,7 @@
 // so this it is prepared to react to user events.
 $(document).ready(function() {
   $(".btn").on("click", addItem);
-  // $(".link-delete").on("click", deleteItem);
+  $(".link-delete").on("click", deleteItem);
   $("ol").on("click", ".link-delete", deleteItem);
 });
 
@@ -25,6 +25,6 @@ function addItem() {
 // item the user wishes to remove.
 function deleteItem(event) {
   console.info(event);
-  // $(event.target).remove();
+  $(event.target).remove();
   $(event.target).parent().remove();
 }
